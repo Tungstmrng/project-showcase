@@ -1,8 +1,3 @@
-
-// =================================
-// REGISTRATION
-// =================================
-
 const registerForm = document.getElementById("registerForm");
 
 if (registerForm) {
@@ -70,11 +65,6 @@ if (registerForm) {
 
 }
 
-
-// =================================
-// LOGIN
-// =================================
-
 const loginForm = document.getElementById("loginForm");
 
 if (loginForm) {
@@ -125,11 +115,6 @@ if (loginForm) {
 
 }
 
-
-// =================================
-// LOGOUT
-// =================================
-
 async function logout() {
 
     const { error } = await supabaseClient.auth.signOut();
@@ -156,10 +141,6 @@ if (logoutLink) {
 
 }
 
-
-// =================================
-// NAVBAR AUTHENTICATION
-// =================================
 
 function updateNavbar(session) {
 
