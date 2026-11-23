@@ -1,6 +1,5 @@
-
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_KEY;
+const SUPABASE_URL = "https://clkhjcytagpoqxyuvmns.supabase.co";
+const SUPABASE_KEY = "sb_publishable_C0pZWuTY3SkOHdjolcF9aw_FKuomSUn";
 
 const supabaseClient = window.supabase.createClient(
     SUPABASE_URL,

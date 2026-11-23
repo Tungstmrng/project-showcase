@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Request Project Access</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <main class="request-container">
+
+        <h1>Request Project Access</h1>
+
+        <p>
+            Want to share your projects with the community?
+            Submit a request to become a project contributor.
+        </p>
+
+        <form id="requestForm">
+
+            <label for="reason">
+                Why do you want to become a contributor?
+            </label>
+
+            <textarea
+                id="reason"
+                name="reason"
+                placeholder="Tell us why you want to upload projects..."
+                rows="6"
+                required
+            ></textarea>
+
+            <button type="submit" id="submitButton">
+                Submit Request
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+        <a href="index.html">Back to Home</a>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/request_access.js"></script>
+
+</body>
+</html>

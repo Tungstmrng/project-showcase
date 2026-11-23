@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <main class="admin-container">
+
+        <header>
+            <h1>Project Access Requests</h1>
+            <p>Manage users who want permission to upload projects.</p>
+        </header>
+
+        <section class="request-section">
+
+            <div class="request-header">
+                <h2>Incoming Requests</h2>
+
+                <button id="refreshButton">
+                    Refresh
+                </button>
+            </div>
+
+            <p id="message"></p>
+
+            <div id="requestList">
+                Loading requests...
+            </div>
+
+        </section>
+
+        <a href="index.html">Back to Home</a>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/admin_dashboard.js"></script>
+
+</body>
+</html>

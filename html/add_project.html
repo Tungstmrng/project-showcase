@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Add Project - Project Showcase</title>
-    <link rel="stylesheet" href="/css/add_project.css">
 
+    <link rel="stylesheet" href="/css/add_project.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -25,25 +25,17 @@
 
             <a href="/index.html">Home</a>
 
-            <a href="/html/top_project.html">
-                Top Project
-            </a>
+            <a href="/html/top_project.html">Top Project</a>
 
             <a href="/html/add_project.html" id="addProjectLink" hidden>
                 Add Project
             </a>
 
-            <a href="/html/register.html" id="registerLink">
-                Register
-            </a>
+            <a href="/html/register.html" id="registerLink">Register</a>
 
-            <a href="/html/login.html" id="loginLink">
-                Login
-            </a>
+            <a href="/html/login.html" id="loginLink">Login</a>
 
-            <a href="#" id="logoutLink" hidden>
-                Logout
-            </a>
+            <a href="#" id="logoutLink" hidden>Logout</a>
 
         </div>
 
@@ -58,65 +50,95 @@
 
             <p>Share your creativity with the community.</p>
 
-            <form id="projectForm">
+            <!-- Access Status -->
+            <div id="accessStatus">
+                Checking your project access...
+            </div>
 
-                <!-- Project Title -->
-                <label for="projectTitle">Project Title</label>
-                <input
-                    type="text"
-                    id="projectTitle"
-                    placeholder="Enter your project title"
-                    required
-                >
+            <!-- Request Access Button -->
+            <div id="requestAccessSection" hidden>
 
-                <!-- Project Category -->
-                <label for="projectCategory">Project Category</label>
-                <select id="projectCategory" required>
-                    <option value="">Select a category</option>
-                    <option value="Game Development">Game Development</option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="Mobile Development">Mobile Development</option>
-                    <option value="Graphic Design">Graphic Design</option>
-                    <option value="Artificial Intelligence">Artificial Intelligence</option>
-                    <option value="Other">Other</option>
-                </select>
+                <p>
+                    You need contributor permission before uploading projects.
+                </p>
 
-                <!-- Project Description -->
-                <label for="projectDescription">Project Description</label>
-                <textarea
-                    id="projectDescription"
-                    placeholder="Describe your project..."
-                    rows="5"
-                    required
-                ></textarea>
+                <a href="/html/request_access.html">
+                    Request Project Access
+                </a>
 
-                <!-- Technologies -->
-                <label for="projectTechnology">Technologies Used</label>
-                <input
-                    type="text"
-                    id="projectTechnology"
-                    placeholder="e.g. HTML, CSS, JavaScript"
-                    required
-                >
+            </div>
 
-                <!-- Project Image -->
-                <label for="projectImage">Project Image</label>
-                <input
-                    type="file"
-                    id="projectImage"
-                    accept="image/*"
-                    required
-                >
 
-                <button type="submit">Submit Project</button>
+            <!-- Project Form -->
+            <div id="projectFormContainer" hidden>
 
-            </form>
+                <form id="projectForm">
 
-            <p id="projectMessage"></p>
+                    <label for="projectTitle">Project Title</label>
+                    <input
+                        type="text"
+                        id="projectTitle"
+                        placeholder="Enter your project title"
+                        required
+                    >
+
+                    <label for="projectCategory">Project Category</label>
+                    <select id="projectCategory" required>
+
+                        <option value="">Select a category</option>
+                        <option value="Game Development">Game Development</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Mobile Development">Mobile Development</option>
+                        <option value="Graphic Design">Graphic Design</option>
+                        <option value="Artificial Intelligence">Artificial Intelligence</option>
+                        <option value="Other">Other</option>
+
+                    </select>
+
+                    <label for="projectDescription">Project Description</label>
+                    <textarea
+                        id="projectDescription"
+                        placeholder="Describe your project..."
+                        rows="5"
+                        required
+                    ></textarea>
+
+                    <label for="projectTechnology">Technologies Used</label>
+                    <input
+                        type="text"
+                        id="projectTechnology"
+                        placeholder="e.g. HTML, CSS, JavaScript"
+                        required
+                    >
+
+                    <!-- New Project URL Field -->
+                    <label for="projectUrl">Project Link (Optional)</label>
+                    <input
+                        type="url"
+                        id="projectUrl"
+                        placeholder="https://github.com/username/project"
+                    >
+
+                    <label for="projectImage">Project Image</label>
+                    <input
+                        type="file"
+                        id="projectImage"
+                        accept="image/*"
+                        required
+                    >
+
+                    <button type="submit">Submit Project</button>
+
+                </form>
+
+                <p id="projectMessage"></p>
+
+            </div>
 
         </div>
 
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="/js/supabase.js"></script>
