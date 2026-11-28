@@ -192,11 +192,6 @@ body{
     transform: none;
 }
 
-
-
-
-/* Responsive */
-
 @media (max-width: 900px) {
     .project-card {
         flex: 0 0 calc((100% - 25px) / 2);

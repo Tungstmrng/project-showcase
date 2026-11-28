@@ -229,3 +229,45 @@ async function checkAuth() {
 }
 
 checkAuth();
+
+async function updateRequestAccessLink() {
+    const link = document.getElementById("requestAccessLink");
+
+    if (!link) return;
+
+    link.hidden = true;
+
+    const {
+        data: { user },
+        error: userError
+    } = await supabaseClient.auth.getUser();
+
+    if (userError || !user) return;
+
+    const { data: admin, error: adminError } =
+        await supabaseClient
+            .from("admin_users")
+            .select("user_id")
+            .eq("user_id", user.id)
+            .maybeSingle();
+
+    if (adminError || admin) return;
+
+    const { data: requests, error: requestError } =
+        await supabaseClient
+            .from("project_access_requests")
+            .select("status")
+            .eq("user_id", user.id)
+            .in("status", ["approved", "pending"])
+            .limit(1);
+
+    if (requestError) return;
+
+    // Only show the link if the user has no approved
+    // or pending request.
+    if (!requests || requests.length === 0) {
+        link.hidden = false;
+    }
+}
+
+updateRequestAccessLink();

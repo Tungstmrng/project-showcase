@@ -2,24 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Showcase</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Creations - Latest Projects</title>
     <link rel="stylesheet" href="/css/style.css">
-</head> 
+</head>
+
 <body>
+
     <div class="heading">
         <div class="title">
-            <a href="index.html" class="title-name">Creations</a>
-        </div>
-        <a href="/html/request_access.html" id="requestAccessLink">
-                Request Access
+            <a href="/index.html" class="title-name">
+                Creations
             </a>
-                
+        </div>
+
         <div class="navbar">
             <a href="/index.html">Home</a>
             <a href="/html/top_project.html">Top Project</a>
 
-            <a href="/html/add_project.html" id="addProjectLink" hidden>
+            <a href="/html/request_access.html"
+   id="requestAccessLink" hidden>
+    Request Access
+</a>
+
+            <a href="/html/add_project.html"
+               id="addProjectLink" hidden>
                 Add Project
             </a>
 
@@ -35,94 +44,21 @@
                 Logout
             </a>
         </div>
-
     </div>
 
-        
+    <main class="projects-section">
+        <h2>Latest Projects</h2>
 
-    <div class="gallery-container">
+        <div id="projectList" class="gallery"></div>
 
-        <button class="arrow prev" id="prev">
-            &#10094;
-        </button>
-
-        <div class="gallery-wrapper">
-            <div class="gallery" id="gallery">
-
-                <div class="project-card">
-                    <img src="img/main1.jpg" alt="Project 2">
-                    <h3>Personal Portfolio</h3>
-                    <p class="project-author">By John Doe</p>
-                    <div class="project-info">
-                        <p>Web Development</p>
-                        <a href="" class="link-button">Visit Project</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/main1.jpg" alt="Project 2">
-                    <h3>Personal Portfolio</h3>
-                    <p class="project-author">By John Doe</p>
-                    <div class="project-info">
-                        <p>Web Development</p>
-                        <a href="" class="link-button">Visit Project</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/main1.jpg" alt="Project 2">
-                    <h3>Personal Portfolio</h3>
-                    <p class="project-author">By John Doe</p>
-                    <div class="project-info">
-                        <p>Web Development</p>
-                        <a href="" class="link-button">Visit Project</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="img/main1.jpg" alt="Project 2">
-                    <h3>Personal Portfolio</h3>
-                    <p class="project-author">By John Doe</p>
-                    <div class="project-info">
-                        <p>Web Development</p>
-                        <a href="" class="link-button">Visit Project</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="img/main1.jpg" alt="Project 2">
-                    <h3>Personal Portfolio</h3>
-                    <p class="project-author">By John Doe</p>
-                    <div class="project-info">
-                        <p>Web Development</p>
-                        <a href="" class="link-button">Visit Project</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="img/main1.jpg" alt="Project 2">
-                    <h3>Personal Portfolio</h3>
-                    <p class="project-author">By John Doe</p>
-                    <div class="project-info">
-                        <p>Web Development</p>
-                        <a href="" class="link-button">Visit Project</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <button class="arrow next" id="next">
-            &#10095;
-        </button>
-
-    </div>
+        <p id="projectStatus">Loading projects...</p>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="/js/supabase.js"></script>
     <script src="/js/auth.js"></script>
     <script src="/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="/js/supabase.js"></script>
-    <script src="/js/auth.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="/js/project.js"></script>
+
 </body>
 </html>

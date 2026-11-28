@@ -8,5 +8,4 @@ const supabaseClient = window.supabase.createClient(
 
 
 console.log("Supabase connection initialized!");
-
 console.log(supabaseClient);

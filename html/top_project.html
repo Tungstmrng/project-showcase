@@ -34,14 +34,28 @@
         </div>
 
     </div>
-    <p>top</p>
+    <section class="gallery-container">
+    <h2>Top Projects</h2>
+
+    <button class="arrow prev" id="prev" aria-label="Previous project">
+        &#10094;
+    </button>
+
+    <div class="gallery-wrapper">
+        <div class="gallery" id="gallery"></div>
+    </div>
+
+    <button class="arrow next" id="next" aria-label="Next project">
+        &#10095;
+    </button>
+
+    <p id="projectStatus">Loading projects...</p>
+</section>
+
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="/js/supabase.js"></script>
     <script src="/js/auth.js"></script>
     <script src="/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="/js/supabase.js"></script>
-    <script src="/js/auth.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="/js/project.js"></script>
 </body>
 </html>
